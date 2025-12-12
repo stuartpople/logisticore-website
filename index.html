@@ -14,7 +14,6 @@
         <nav>
             <div class="logo-container">
                 <img src="assets/img/logisticore-technologies-logo.png" alt="LogistiCore Technologies Logo" class="logo">
-                <span class="brand-name">LogistiCore Technologies</span>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
             <ul class="nav-links" id="navLinks">
@@ -31,13 +30,15 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <canvas id="techCanvas" class="tech-canvas"></canvas>
+        <div class="tech-particles"></div>
         <div class="hero-content">
             <h1>LogistiCore Technologies</h1>
             <p class="hero-subheading">IT Support, Logistics Websites, and the LogistiCore SaaS platform.</p>
             <div class="hero-cta">
                 <a href="it-support.html" class="btn btn-primary">IT Support</a>
                 <a href="logisticore-saas.html" class="btn btn-secondary">Explore LogistiCore SaaS</a>
-                <a href="website-creation.html" class="btn btn-tertiary">Logistics Website Creation</a>
+                <a href="website-creation.html" class="btn btn-tertiary">Website Creation</a>
             </div>
         </div>
     </section>
@@ -60,7 +61,7 @@
                     <li>System monitoring & maintenance</li>
                     <li>IT strategy & consulting</li>
                 </ul>
-                <a href="it-support.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Learn More</a>
+                <a href="it-support.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block; width: auto;">Learn More →</a>
             </div>
 
             <!-- LogistiCore SaaS -->
@@ -77,13 +78,13 @@
                     <li>Multi-user & role-based access</li>
                     <li>Integrated warehouse management</li>
                 </ul>
-                <a href="logisticore-saas.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Explore Platform</a>
+                <a href="logisticore-saas.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block; width: auto;">Explore Platform →</a>
             </div>
 
-            <!-- Logistics Website Creation -->
+            <!-- Website Creation -->
             <div class="service-card">
                 <div class="service-icon">🌐</div>
-                <h3>Logistics Website Creation</h3>
+<h3>Website Creation</h3>
                 <ul>
                     <li>Logistics-first design approach</li>
                     <li>Mobile-responsive websites</li>
@@ -93,7 +94,7 @@
                     <li>Fast, secure hosting</li>
                     <li>General business sites available</li>
                 </ul>
-                <a href="website-creation.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">View Services</a>
+                <a href="website-creation.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block; width: auto;">View Services →</a>
             </div>
         </div>
     </section>
@@ -147,6 +148,143 @@
                 }
             });
         });
+
+        // Animated Tech Canvas Background
+        const canvas = document.getElementById('techCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = canvas.offsetWidth;
+            let height = canvas.height = canvas.offsetHeight;
+            
+            // Resize canvas on window resize
+            window.addEventListener('resize', () => {
+                width = canvas.width = canvas.offsetWidth;
+                height = canvas.height = canvas.offsetHeight;
+            });
+
+            // Particle system
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.5;
+                    this.vy = (Math.random() - 0.5) * 0.5;
+                    this.radius = Math.random() * 2 + 1;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(0, 188, 212, 0.6)';
+                    ctx.fill();
+                }
+            }
+
+            // Create particles (increased for more density)
+            const particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+
+            // Pulsing rings effect
+            let ringPhase = 0;
+            function drawPulsingRings() {
+                ringPhase += 0.01;
+                
+                for (let i = 0; i < 3; i++) {
+                    const x = width * 0.5;
+                    const y = height * 0.5;
+                    const baseRadius = 50 + i * 80;
+                    const radius = baseRadius + Math.sin(ringPhase + i) * 20;
+                    const opacity = 0.1 + Math.sin(ringPhase + i) * 0.05;
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(0, 188, 212, ${opacity})`;
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                }
+            }
+
+            // Connection lines
+            function connect() {
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 150) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(14, 165, 233, ${0.2 * (1 - distance / 150)})`;
+                            ctx.lineWidth = 1;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            // Geometric shapes
+            let rotation = 0;
+            function drawGeometry() {
+                rotation += 0.002;
+                
+                // Draw rotating hexagons
+                for (let i = 0; i < 3; i++) {
+                    const x = width * (0.2 + i * 0.3);
+                    const y = height * 0.5;
+                    const size = 40 + i * 20;
+                    
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(rotation + i);
+                    ctx.beginPath();
+                    
+                    for (let j = 0; j < 6; j++) {
+                        const angle = (Math.PI / 3) * j;
+                        const hx = Math.cos(angle) * size;
+                        const hy = Math.sin(angle) * size;
+                        if (j === 0) ctx.moveTo(hx, hy);
+                        else ctx.lineTo(hx, hy);
+                    }
+                    
+                    ctx.closePath();
+                    ctx.strokeStyle = `rgba(0, 188, 212, ${0.15 - i * 0.03})`;
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                
+                drawPulsingRings();
+                drawGeometry();
+                
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+                
+                connect();
+                
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
     </script>
 </body>
 </html>
