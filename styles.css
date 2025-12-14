@@ -498,7 +498,7 @@ nav {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
 }
 
-/* Animated subtle tech pattern on white background */
+/* Animated subtle tech pattern on white background - ENHANCED */
 .services::before {
     content: '';
     position: absolute;
@@ -507,14 +507,17 @@ nav {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
+        radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.08) 0%, rgba(0, 188, 212, 0.02) 40%, transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.08) 0%, rgba(14, 165, 233, 0.02) 40%, transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.06) 0%, rgba(0, 188, 212, 0.01) 50%, transparent 70%),
+        radial-gradient(circle at 10% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 20%, rgba(0, 188, 212, 0.05) 0%, transparent 50%);
     animation: subtle-shift 15s ease-in-out infinite;
     pointer-events: none;
+    z-index: 0;
 }
 
-/* Animated floating particles overlay */
+/* Animated floating particles overlay - NOW VISIBLE! */
 .services::after {
     content: '';
     position: absolute;
@@ -523,16 +526,21 @@ nav {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(2px 2px at 10% 20%, rgba(0, 188, 212, 0.3), transparent),
-        radial-gradient(2px 2px at 30% 50%, rgba(14, 165, 233, 0.3), transparent),
-        radial-gradient(2px 2px at 60% 30%, rgba(0, 188, 212, 0.3), transparent),
-        radial-gradient(2px 2px at 80% 60%, rgba(14, 165, 233, 0.3), transparent),
-        radial-gradient(2px 2px at 40% 80%, rgba(0, 188, 212, 0.3), transparent),
-        radial-gradient(2px 2px at 90% 90%, rgba(14, 165, 233, 0.3), transparent);
+        radial-gradient(circle 8px at 10% 20%, rgba(0, 188, 212, 0.6), rgba(0, 188, 212, 0.2) 50%, transparent 100%),
+        radial-gradient(circle 6px at 30% 50%, rgba(14, 165, 233, 0.7), rgba(14, 165, 233, 0.2) 50%, transparent 100%),
+        radial-gradient(circle 10px at 60% 30%, rgba(0, 188, 212, 0.5), rgba(0, 188, 212, 0.15) 50%, transparent 100%),
+        radial-gradient(circle 7px at 80% 60%, rgba(14, 165, 233, 0.6), rgba(14, 165, 233, 0.2) 50%, transparent 100%),
+        radial-gradient(circle 9px at 40% 80%, rgba(0, 188, 212, 0.6), rgba(0, 188, 212, 0.15) 50%, transparent 100%),
+        radial-gradient(circle 8px at 90% 90%, rgba(14, 165, 233, 0.7), rgba(14, 165, 233, 0.2) 50%, transparent 100%),
+        radial-gradient(circle 5px at 25% 15%, rgba(0, 188, 212, 0.5), transparent 100%),
+        radial-gradient(circle 6px at 70% 85%, rgba(14, 165, 233, 0.6), transparent 100%),
+        radial-gradient(circle 7px at 15% 65%, rgba(0, 188, 212, 0.4), transparent 100%),
+        radial-gradient(circle 5px at 85% 35%, rgba(14, 165, 233, 0.5), transparent 100%);
     background-size: 100% 100%;
-    animation: float-particles 20s linear infinite;
+    animation: float-particles 20s ease-in-out infinite;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 1;
+    z-index: 1;
 }
 
 @keyframes subtle-shift {
@@ -561,6 +569,8 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+    position: relative;
+    z-index: 2;
 }
 
 .service-card {
@@ -570,6 +580,8 @@ nav {
     padding: var(--spacing-md);
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
     position: relative;
     overflow: hidden;
     animation: card-float 6s ease-in-out infinite;

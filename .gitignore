@@ -36,3 +36,6 @@ Temporary Items
 
 # Placeholder file
 assets/img/PLACE_LOGO_HERE.txt
+
+# Local Netlify folder
+.netlify
