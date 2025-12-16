@@ -644,11 +644,14 @@
             consentSection.style.display = 'none';
             submitSection.style.display = 'none';
             
-            // Note: To activate real email submissions:
-            // 1. Sign up at formspree.io (free)
-            // 2. Replace "YOUR_FORM_ID" in the form's action attribute with your Formspree form ID
-            // 3. Remove the e.preventDefault() line above
-            // Or use Netlify Forms by adding netlify attribute to the form
+        });
+
+        // Initialize form on page load - remove required from hidden conditional fields
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove required from all conditional fields on initial load
+            document.querySelectorAll('.conditional-fields select, .conditional-fields input:not([type="checkbox"]), .conditional-fields textarea').forEach(field => {
+                field.removeAttribute('required');
+            });
         });
     </script>
 </body>
