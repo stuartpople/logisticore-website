@@ -556,10 +556,14 @@
         const submitSection = document.getElementById('submit-section');
         
         enquiryTypeSelect.addEventListener('change', function() {
-            // Hide all conditional field sections
+            // Hide all conditional field sections and DISABLE their inputs
             document.querySelectorAll('.conditional-fields').forEach(section => {
                 section.classList.remove('show');
                 section.style.display = 'none';
+                // Disable all inputs in hidden sections so they don't submit
+                section.querySelectorAll('input, select, textarea').forEach(input => {
+                    input.disabled = true;
+                });
             });
             
             // Hide message, consent, and submit sections initially
@@ -573,6 +577,10 @@
                 const targetSection = document.getElementById(selectedType + '-fields');
                 if (targetSection) {
                     targetSection.style.display = 'block';
+                    // Enable inputs in the visible section
+                    targetSection.querySelectorAll('input, select, textarea').forEach(input => {
+                        input.disabled = false;
+                    });
                     // Trigger reflow for animation
                     void targetSection.offsetWidth;
                     targetSection.classList.add('show');
@@ -646,11 +654,14 @@
             
         });
 
-        // Initialize form on page load - remove required from hidden conditional fields
+        // Initialize form on page load - disable all conditional fields
         document.addEventListener('DOMContentLoaded', function() {
-            // Remove required from all conditional fields on initial load
-            document.querySelectorAll('.conditional-fields select, .conditional-fields input:not([type="checkbox"]), .conditional-fields textarea').forEach(field => {
-                field.removeAttribute('required');
+            // Disable all conditional fields on initial load so they don't submit as empty
+            document.querySelectorAll('.conditional-fields').forEach(section => {
+                section.querySelectorAll('input, select, textarea').forEach(field => {
+                    field.disabled = true;
+                    field.removeAttribute('required');
+                });
             });
         });
     </script>
