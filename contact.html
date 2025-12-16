@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png?v=3">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png?v=3">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=3">
+    <link rel="manifest" href="assets/manifest.json?v=3">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -81,7 +83,7 @@
 
         <div class="contact-form-container">
             <!-- Single Professional Form with Conditional Fields -->
-            <form id="main-contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="main-contact-form" class="contact-form" action="https://formspree.io/f/xkgzbaqy" method="POST">
                 
                 <div class="form-header">
                     <h3>Contact LogistiCore Technologies</h3>
@@ -612,7 +614,6 @@
         // Contact form submission
         const mainForm = document.getElementById('main-contact-form');
         mainForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             
             // Get form data
             const formData = new FormData(this);
