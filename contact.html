@@ -619,40 +619,7 @@
             }
         }
 
-        // Contact form submission
-        const mainForm = document.getElementById('main-contact-form');
-        mainForm.addEventListener('submit', function(e) {
-            
-            // Get form data
-            const formData = new FormData(this);
-            const enquiryType = formData.get('enquiry_type');
-            
-            // Map enquiry type values to readable names
-            const enquiryNames = {
-                'it-support': 'IT Support & Managed Services',
-                'saas': 'LogistiCore SaaS Platform',
-                'web-design': 'Website Design & Development',
-                'general': 'General Inquiry'
-            };
-            
-            const enquiryName = enquiryNames[enquiryType] || enquiryType;
-            
-            // Show success message
-            alert(`Thank you for your interest in ${enquiryName}!\n\nWe've received your information and will get back to you within 24 hours.\n\nFor urgent matters, please call us at +44 (0) 333 339 0451`);
-            
-            // Reset form
-            this.reset();
-            
-            // Hide conditional sections after reset
-            document.querySelectorAll('.conditional-fields').forEach(section => {
-                section.classList.remove('show');
-                section.style.display = 'none';
-            });
-            messageSection.style.display = 'none';
-            consentSection.style.display = 'none';
-            submitSection.style.display = 'none';
-            
-        });
+        // Form will submit naturally to Formspree - no JavaScript interception needed
 
         // Initialize form on page load - disable all conditional fields
         document.addEventListener('DOMContentLoaded', function() {
