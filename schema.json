@@ -1,0 +1,51 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LogistiCore Technologies Ltd",
+  "alternateName": "LogistiCore",
+  "url": "https://logisticoreapp.com",
+  "logo": "https://logisticoreapp.com/assets/img/logisticore-technologies-logo.png",
+  "description": "Professional IT support, logistics software (SaaS), and modern web design for UK businesses",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-333-339-0451",
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://github.com/stuartpople"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "IT Support & Managed Services",
+        "description": "24/7 IT support, managed services, network security, cloud migration for UK businesses"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "name": "LogistiCore SaaS Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Cloud-based logistics management software for freight forwarders, customs brokers, and 3PLs"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Website Design & Development",
+        "description": "Professional, mobile-responsive website design and development for UK businesses"
+      }
+    }
+  ]
+}
