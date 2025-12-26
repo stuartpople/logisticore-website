@@ -853,6 +853,29 @@ footer {
     text-align: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 
+        0 4px 20px rgba(0, 188, 212, 0.4),
+        inset 0 0 100px rgba(0, 188, 212, 0.15),
+        0 0 50px rgba(0, 188, 212, 0.2);
+    border-bottom: 4px solid var(--light-cyan);
+    animation: header-pulse 3s ease-in-out infinite;
+}
+
+@keyframes header-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 4px 20px rgba(0, 188, 212, 0.4),
+            inset 0 0 100px rgba(0, 188, 212, 0.15),
+            0 0 50px rgba(0, 188, 212, 0.2);
+        border-bottom-color: var(--light-cyan);
+    }
+    50% {
+        box-shadow: 
+            0 4px 30px rgba(0, 188, 212, 0.6),
+            inset 0 0 120px rgba(0, 188, 212, 0.25),
+            0 0 70px rgba(0, 188, 212, 0.4);
+        border-bottom-color: var(--primary-cyan);
+    }
 }
 
 .page-header::before {
@@ -863,10 +886,34 @@ footer {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(0, 188, 212, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.2) 0%, transparent 50%);
     animation: pulse-gradient 8s ease-in-out infinite;
     pointer-events: none;
+}
+
+/* Add a badge/indicator after the h1 */
+.page-header h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-cyan), var(--primary-blue), var(--light-cyan));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 20px var(--primary-cyan);
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px var(--primary-cyan);
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 0 0 30px var(--light-cyan), 0 0 40px var(--primary-cyan);
+        opacity: 0.8;
+    }
 }
 
 .page-header h1 {
@@ -875,6 +922,15 @@ footer {
     margin-bottom: var(--spacing-sm);
     position: relative;
     z-index: 1;
+    text-shadow: 
+        0 0 30px rgba(0, 188, 212, 0.7),
+        0 0 20px rgba(0, 188, 212, 0.5),
+        0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--light-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .page-header p {
@@ -882,6 +938,7 @@ footer {
     color: var(--light-cyan);
     position: relative;
     z-index: 1;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .page-content {
@@ -982,6 +1039,28 @@ footer {
     color: #64748b;
 }
 
+/* Feature boxes inside dark sections need dark styling */
+.content-section.bg-dark .feature-box {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-section.bg-dark .feature-box h3 {
+    color: var(--white);
+}
+
+.content-section.bg-dark .feature-box p,
+.content-section.bg-dark .feature-box li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.content-section.bg-dark .feature-box:hover {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border-color: var(--light-cyan);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
 /* Section Dividers with Backgrounds */
 .content-section {
     padding: 3rem 0;
@@ -1024,6 +1103,21 @@ footer {
 
 .content-section.bg-dark p,
 .content-section.bg-dark li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Info cards inside dark sections need transparent/dark styling */
+.content-section.bg-dark .info-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--light-cyan);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-section.bg-dark .info-card h3 {
+    color: var(--white);
+}
+
+.content-section.bg-dark .info-card p {
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -1089,6 +1183,12 @@ footer {
 
 .two-column-layout .column-content {
     padding: 1rem 0;
+}
+
+/* Column image inside dark sections */
+.content-section.bg-dark .column-image {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.15) 0%, rgba(14, 165, 233, 0.15) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Stats/Highlights Section */
