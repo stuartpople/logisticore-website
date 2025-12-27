@@ -91,6 +91,8 @@ header::after {
         rgba(0, 188, 212, 0.05) 50%, 
         transparent 100%);
     animation: scanline 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
 }
 
 @keyframes scanline {
@@ -196,6 +198,8 @@ nav {
     list-style: none;
     gap: 2rem;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .nav-links a {
@@ -205,6 +209,31 @@ nav {
     transition: all 0.3s ease;
     position: relative;
     text-shadow: 0 0 0 transparent;
+    z-index: 10;
+}
+
+/* Active page indicator */
+.nav-links a[href="index.html"],
+.nav-links a[href="it-support.html"],
+.nav-links a[href="logisticore-saas.html"],
+.nav-links a[href="website-creation.html"],
+.nav-links a[href="pricing.html"],
+.nav-links a[href="contact.html"] {
+    /* Default state */
+}
+
+/* When on home page (index.html) */
+body:has(section.hero) .nav-links a[href="index.html"],
+/* When on IT Support page */
+body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.html"],
+/* Active page based on current URL pattern */
+.nav-links a.active {
+    color: var(--light-cyan);
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
@@ -1309,6 +1338,22 @@ footer {
 
 .process-step .step-content h3 {
     margin-top: 0;
+}
+
+/* Process steps in dark sections */
+.content-section.bg-dark .process-step .step-content {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-section.bg-dark .process-step .step-content h3 {
+    color: var(--light-cyan);
+}
+
+.content-section.bg-dark .process-step .step-content p,
+.content-section.bg-dark .process-step .step-content li {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* Contact Forms Styling */

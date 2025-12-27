@@ -89,7 +89,7 @@
     <!-- Safari pinned tab (monochrome mask) -->
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -406,6 +406,19 @@
 
     <!-- Freshdesk Support Widget -->
     <script>
+    // Highlight active page in navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-links a:not(.login-btn)');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    });
+
     function initFreshdesk() {
       window.fdWidget.init({
         token: "01KCQ04ZY3X163GEM27SYC1P43",

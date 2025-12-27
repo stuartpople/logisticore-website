@@ -13,7 +13,7 @@
     <link rel="manifest" href="assets/manifest.json?v=3">
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -143,24 +143,31 @@
                     <ul>
                         <li>AI document extraction</li>
                         <li>Smart data entry</li>
-            <li>Predictive routing and pricing</li>
-            <li>Intelligent error detection</li>
-            <li>Natural language queries</li>
-            <li>Automated email processing</li>
-        </ul>
+                        <li>Predictive routing and pricing</li>
+                        <li>Intelligent error detection</li>
+                        <li>Natural language queries</li>
+                        <li>Automated email processing</li>
+                    </ul>
+                </div>
+            </div>
 
-        <h3>📊 Reporting & Analytics</h3>
-        <p>Make data-driven decisions with powerful reporting and real-time business intelligence.</p>
-        <ul>
-            <li>Real-time dashboards and KPIs</li>
-            <li>Custom report builder</li>
-            <li>Financial performance tracking</li>
-            <li>Shipment volume and revenue analysis</li>
-            <li>Customer profitability reports</li>
-            <li>Export reports to Excel, PDF, or CSV</li>
-        </ul>
+            <div class="feature-box" style="grid-column: 1 / -1; margin-top: 2rem;">
+                <span class="feature-icon">📊</span>
 
-        <h2>Why LogistiCore SaaS?</h2>
+                <h3>Reporting & Analytics</h3>
+                <p>Make data-driven decisions with powerful reporting and real-time business intelligence.</p>
+                <ul>
+                    <li>Real-time dashboards and KPIs</li>
+                    <li>Custom report builder</li>
+                    <li>Financial performance tracking</li>
+                    <li>Shipment volume and revenue analysis</li>
+                    <li>Customer profitability reports</li>
+                    <li>Export reports to Excel, PDF, or CSV</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Why LogistiCore SaaS?</h2>
 
         <h3>🌍 Built for Global Operations</h3>
         <p>LogistiCore supports multi-currency, multi-language, and multi-office operations, making it perfect for freight forwarders with international reach.</p>
@@ -226,6 +233,19 @@
 
     <!-- Freshdesk Support Widget -->
     <script>
+    // Highlight active page in navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-links a:not(.login-btn)');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    });
+
     function initFreshdesk() {
       window.fdWidget.init({
         token: "01KCQ04ZY3X163GEM27SYC1P43",
