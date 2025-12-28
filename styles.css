@@ -48,7 +48,7 @@ body {
 
 header {
     background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-bg) 100%);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -121,7 +121,7 @@ nav {
 }
 
 .logo {
-    height: 180px;
+    height: 160px;
     width: auto;
     animation: logo-animate 4s ease-in-out infinite, logo-rotate 20s linear infinite;
     transition: all 0.4s ease;
