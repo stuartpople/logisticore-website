@@ -196,7 +196,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -206,10 +206,12 @@ nav {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
     text-shadow: 0 0 0 transparent;
     z-index: 10;
+    white-space: nowrap;
 }
 
 /* Active page indicator */
