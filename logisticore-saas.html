@@ -16,6 +16,7 @@
     <link rel="manifest" href="assets/manifest.json?v=3">
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
+    <link rel="preload" as="image" href="assets/img/logisticore-technologies-logo.png">
     <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
@@ -220,6 +221,17 @@
             <p class="footer-copyright">© 2025 LogistiCore Technologies Ltd. All rights reserved.</p>
         </div>
     </footer>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://logisticoreapp.com/"},
+                {"@type": "ListItem", "position": 2, "name": "LogistiCore SaaS", "item": "https://logisticoreapp.com/logisticore-saas.html"}
+            ]
+        }
+        </script>
 
     <!-- Mobile Menu Toggle Script -->
     <script>

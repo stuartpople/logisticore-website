@@ -16,6 +16,7 @@
     <link rel="manifest" href="assets/manifest.json?v=3">
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
+    <link rel="preload" as="image" href="assets/img/logisticore-technologies-logo.png">
     <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
@@ -422,6 +423,17 @@
         </div>
     </footer>
 
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://logisticoreapp.com/"},
+                {"@type": "ListItem", "position": 2, "name": "IT Support", "item": "https://logisticoreapp.com/it-support.html"}
+            ]
+        }
+        </script>
+
     <!-- Mobile Menu Toggle Script -->
     <script>
         function toggleMenu() {
@@ -492,6 +504,24 @@
             ]
         }
         </script>
+
+        <section class="content-section" style="margin-top: 2rem;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Resources</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                <a href="blog/freight-forwarding-software-buyers-guide-2026.html" style="text-decoration: none;">
+                    <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 10px; padding: 1rem;">
+                        <h3 style="margin: 0 0 0.5rem; color: #0ea5e9;">Freight Forwarding Software Buyer’s Guide 2026</h3>
+                        <p style="margin: 0; color: #64748b;">Compare logistics SaaS modules and plan migration.</p>
+                    </div>
+                </a>
+                <a href="blog/cds-customs-declarations-software-checklist-2026.html" style="text-decoration: none;">
+                    <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 10px; padding: 1rem;">
+                        <h3 style="margin: 0 0 0.5rem; color: #0ea5e9;">CDS Customs Declarations Checklist 2026</h3>
+                        <p style="margin: 0; color: #64748b;">Practical validation and compliance checklist for UK CDS.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
         <!-- Freshdesk Support Widget - DISABLED -->
     <!--
