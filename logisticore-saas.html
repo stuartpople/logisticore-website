@@ -13,7 +13,7 @@
     <link rel="manifest" href="assets/manifest.json?v=3">
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
-    <link rel="stylesheet" href="styles.css?v=10">
+    <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -232,7 +232,8 @@
         });
     </script>
 
-    <!-- Freshdesk Support Widget -->
+    <!-- Freshdesk Support Widget - DISABLED -->
+    <!--
     <script>
     // Highlight active page in navigation
     document.addEventListener('DOMContentLoaded', function() {
@@ -256,6 +257,25 @@
     }
 
     function initialize(i,t){var e;i.getElementById(t)?initFreshdesk():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://logisticoreapp.freshdesk.com/webchat/js/widget.js",e.onload=initFreshdesk,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshdesk-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    -->
+    
+    <script>
+    // Highlight active page in navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-links a:not(.login-btn)');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    });
     </script>
+    
+    <!-- Custom Support Widget -->
+    <link rel="stylesheet" href="support-widget.css">
+    <script src="support-widget.js"></script>
 </body>
 </html>
