@@ -299,7 +299,8 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
 .customs-btn {
     background: linear-gradient(135deg, rgba(0, 188, 212, 0.08), rgba(14, 165, 233, 0.12));
     color: #67e8f9 !important;
-    padding: 0.5rem 1.5rem;
+    /* padding reduced by border-width (2px) on each side so total height = login-btn */
+    padding: calc(0.5rem - 2px) calc(1.5rem - 2px);
     border-radius: 6px;
     font-weight: 600;
     font-size: inherit;

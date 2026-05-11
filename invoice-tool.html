@@ -63,7 +63,7 @@
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
 
     <link rel="preload" as="image" href="assets/img/logisticore-technologies-logo.png">
-    <link rel="stylesheet" href="styles.css?v=14">
+    <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -214,6 +214,35 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Going further: HMRC document codes -->
+        <div class="content-section" style="background: linear-gradient(135deg, #071319 0%, #0A1628 100%); border-radius: 16px; padding: 3rem; color: white; border: 1px solid rgba(0,188,212,0.2);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1000px; margin: 0 auto;">
+                <div>
+                    <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #67e8f9; margin-bottom: 0.75rem;">⚙ Customs Tool — HMRC Integration</div>
+                    <h2 style="color: white; font-size: 1.9rem; margin-bottom: 1rem; line-height: 1.3;">Invoice Data Is Step One. Document Codes Are Step Two.</h2>
+                    <p style="color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 1.25rem;">Once you have your invoice data extracted, every CDS import declaration requires <strong style="color: #67e8f9;">document codes</strong> — the HMRC references that identify which licences, certificates, and authorisations apply to your goods (N935, C600, U110, and hundreds more).</p>
+                    <p style="color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 1.75rem;">Our <strong style="color: #67e8f9;">Customs Tool</strong> connects directly to HMRC in real-time to look up the correct document codes for your commodity. No manual lookup in the tariff. No guessing which codes apply. The tool queries HMRC's API and returns the valid document requirements for your specific goods — instantly.</p>
+                    <a href="https://customs.logisticoreapp.com" class="btn" style="background: rgba(0,188,212,0.15); color: #67e8f9; border: 2px solid rgba(0,188,212,0.5); padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-block;" target="_blank">⚙ Open Customs Tool →</a>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="background: rgba(0,188,212,0.08); border: 1px solid rgba(0,188,212,0.2); border-radius: 10px; padding: 1.25rem;">
+                        <div style="color: #67e8f9; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem;">📡 Real-Time HMRC API</div>
+                        <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; margin: 0; line-height: 1.5;">Queries HMRC's Trade Tariff API live — document code results are always current, never out-of-date reference lists.</p>
+                    </div>
+                    <div style="background: rgba(0,188,212,0.08); border: 1px solid rgba(0,188,212,0.2); border-radius: 10px; padding: 1.25rem;">
+                        <div style="color: #67e8f9; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem;">🔍 Commodity-Specific Results</div>
+                        <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; margin: 0; line-height: 1.5;">Enter your commodity code and the tool returns exactly which document codes are required, permitted, or conditional for those goods.</p>
+                    </div>
+                    <div style="background: rgba(0,188,212,0.08); border: 1px solid rgba(0,188,212,0.2); border-radius: 10px; padding: 1.25rem;">
+                        <div style="color: #67e8f9; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem;">📋 CDS Declaration Ready</div>
+                        <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; margin: 0; line-height: 1.5;">Results map directly to CDS data element 2/3 — copy the codes straight into your declaration or customs entry system upload.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile stacking fix -->
+            <style>@media (max-width: 768px) { .invoice-hmrc-grid { grid-template-columns: 1fr !important; } }</style>
         </div>
 
         <!-- CTA -->
