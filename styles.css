@@ -123,7 +123,7 @@ nav {
 }
 
 .logo {
-    height: 160px;
+    height: 90px;
     width: auto;
     animation: logo-animate 4s ease-in-out infinite, logo-rotate 20s linear infinite;
     transition: all 0.4s ease;
@@ -293,6 +293,63 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
         0 5px 25px rgba(0, 188, 212, 0.5),
         0 0 40px rgba(0, 188, 212, 0.3);
     animation-play-state: paused;
+}
+
+/* Tools Dropdown Nav */
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown > a::after {
+    content: ' ▾';
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-navy);
+    min-width: 190px;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    border: 1px solid rgba(0, 188, 212, 0.35);
+    list-style: none;
+}
+
+.has-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 188, 212, 0.12);
+    color: var(--light-cyan);
+}
+
+.dropdown-menu a::after {
+    display: none !important;
+}
+
+/* Highlight 'Tools' label when on a tool sub-page */
+.has-dropdown:has(a.active) > a {
+    color: var(--light-cyan) !important;
+    font-weight: 600;
 }
 
 /* Mobile Menu Toggle */
@@ -916,7 +973,7 @@ footer {
 .page-header {
     background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-bg) 100%);
     color: var(--white);
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 1.5rem var(--spacing-md);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -984,9 +1041,9 @@ footer {
 }
 
 .page-header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
     text-shadow: 
@@ -1001,7 +1058,7 @@ footer {
 }
 
 .page-header p {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
     color: var(--light-cyan);
     position: relative;
     z-index: 1;
@@ -1676,7 +1733,7 @@ footer {
     }
 
     .logo {
-        height: 140px; /* shrink logo slightly on mobile to reduce header height */
+        height: 75px; /* shrink logo on mobile */
     }
 
     .menu-toggle {
