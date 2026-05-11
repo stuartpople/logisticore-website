@@ -295,6 +295,34 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     animation-play-state: paused;
 }
 
+/* Customs Tool launch button — amber/orange, distinct from Client Login */
+.customs-btn {
+    background: transparent;
+    color: #f59e0b !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid #f59e0b;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+}
+
+.customs-btn::after {
+    display: none !important;
+}
+
+.customs-btn:hover {
+    background: #f59e0b;
+    color: #1a1a2e !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    text-shadow: none !important;
+}
+
 /* Tools Dropdown Nav */
 .has-dropdown {
     position: relative;
