@@ -75,14 +75,16 @@
             </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
             <!-- Standard LogistiCore marketing site navigation — keep in sync across all pages -->
+            <div class="nav-wrap" id="navWrap">
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="it-support.html">IT Support</a></li>
-                <li><a href="logisticore-saas.html">LogistiCore SaaS</a></li>
-                <li><a href="website-creation.html">Website Creation</a></li>
+                <li><a href="logisticore-saas.html">SaaS</a></li>
+                <li><a href="website-creation.html">Websites</a></li>
                 <li class="has-dropdown"><a href="uk-air-rates.html">Free Tools</a>
                     <ul class="dropdown-menu">
                         <li><a href="https://app.logisticoreapp.com/rates/tool/" target="_blank" rel="noopener">UK Air Rates — search</a></li>
+                        <li><a href="https://app.logisticoreapp.com/rates/tool/curator/" target="_blank" rel="noopener">Upload tariffs (staff)</a></li>
                         <li><a href="https://customs.logisticoreapp.com" target="_blank" rel="noopener">Customs Tool</a></li>
                         <li><a href="invoice-tool.html">Invoice Tool</a></li>
                         <li><a href="custom-tools.html">Custom Tools</a></li>
@@ -91,10 +93,13 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://app.logisticoreapp.com/rates/tool/" class="customs-btn" target="_blank" rel="noopener">✈ Air Rates</a></li>
-                <li><a href="https://customs.logisticoreapp.com" class="customs-btn" target="_blank" rel="noopener">⚙ Customs</a></li>
-                <li><a href="https://app.logisticoreapp.com/app/login" class="login-btn">LogistiCore SaaS</a></li>
             </ul>
+            <div class="nav-utilities">
+                <a href="https://app.logisticoreapp.com/rates/tool/" class="nav-chip" target="_blank" rel="noopener" title="UK Air Rate Search">✈ Rates</a>
+                <a href="https://customs.logisticoreapp.com" class="nav-chip nav-chip-alt" target="_blank" rel="noopener" title="Customs Tool">⚙ Customs</a>
+                <a href="https://app.logisticoreapp.com/app/login" class="login-btn" title="LogistiCore SaaS login">Login</a>
+            </div>
+            </div>
         </nav>
     </header>
 
@@ -632,14 +637,14 @@
     <!-- Mobile Menu Toggle Script -->
     <script>
         function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            const navWrap = document.getElementById('navWrap') || document.getElementById('navLinks');
+            navWrap.classList.toggle('active');
         }
         
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
-                    document.getElementById('navLinks').classList.remove('active');
+                    (document.getElementById('navWrap') || document.getElementById('navLinks')).classList.remove('active');
                 }
             });
         });
