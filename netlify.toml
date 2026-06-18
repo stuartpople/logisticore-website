@@ -1,0 +1,4 @@
+# Static HTML — no build step
+[build]
+  publish = "."
+  command = "echo static"
