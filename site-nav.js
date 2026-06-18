@@ -1,4 +1,6 @@
 (function () {
+  const CURATOR_LOGIN = 'https://app.logisticoreapp.com/rates/tool/curator/login/';
+
   function closeAllDropdowns(except) {
     document.querySelectorAll('.has-dropdown.is-open').forEach(el => {
       if (el !== except) {
@@ -25,5 +27,14 @@
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeAllDropdowns(null);
+  });
+
+  // Staff-only: double-click the logo opens the rate curator sign-in (not linked in nav).
+  document.querySelectorAll('.logo-container, .logo').forEach(el => {
+    el.addEventListener('dblclick', e => {
+      e.preventDefault();
+      window.location.href = CURATOR_LOGIN;
+    });
+    el.style.cursor = 'default';
   });
 })();
