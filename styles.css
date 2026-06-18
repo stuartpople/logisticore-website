@@ -433,20 +433,60 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     position: relative;
 }
 
-.has-dropdown > a::after {
-    content: ' ▾';
+/* Invisible bridge so the menu stays open while moving the mouse down */
+.has-dropdown::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 14px;
+    display: none;
+}
+
+.has-dropdown:hover::after,
+.has-dropdown.is-open::after,
+.has-dropdown:focus-within::after {
+    display: block;
+}
+
+.nav-dropdown-trigger {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 0 0 transparent;
+    z-index: 10;
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.nav-dropdown-trigger::after {
+    content: '▾';
     font-size: 0.75em;
     opacity: 0.8;
+}
+
+.nav-dropdown-trigger:hover,
+.has-dropdown.is-open > .nav-dropdown-trigger {
+    color: var(--light-cyan);
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 12px);
+    top: calc(100% + 4px);
     left: 50%;
     transform: translateX(-50%);
     background: var(--dark-navy);
-    min-width: 190px;
+    min-width: 210px;
     border-radius: 8px;
     padding: 0.5rem 0;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -455,8 +495,17 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     list-style: none;
 }
 
-.has-dropdown:hover .dropdown-menu {
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown.is-open .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
     display: block;
+}
+
+.dropdown-sep {
+    height: 1px;
+    margin: 0.35rem 0.75rem;
+    background: rgba(0, 188, 212, 0.25);
+    padding: 0 !important;
 }
 
 .dropdown-menu li {
@@ -479,8 +528,8 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     display: none !important;
 }
 
-/* Highlight 'Tools' label when on a tool sub-page */
-.has-dropdown:has(a.active) > a {
+/* Highlight dropdown trigger when on a tool sub-page */
+.has-dropdown:has(a.active) > .nav-dropdown-trigger {
     color: var(--light-cyan) !important;
     font-weight: 600;
 }

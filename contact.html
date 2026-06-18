@@ -17,7 +17,7 @@
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
     <link rel="preload" as="image" href="assets/img/logisticore-technologies-logo.png">
-        <link rel="stylesheet" href="styles.css?v=16">
+        <link rel="stylesheet" href="styles.css?v=17">
     
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -81,11 +81,19 @@
                 <li><a href="it-support.html">IT Support</a></li>
                 <li><a href="logisticore-saas.html">SaaS</a></li>
                 <li><a href="website-creation.html">Websites</a></li>
-                <li class="has-dropdown"><a href="uk-air-rates.html">Free Tools</a>
+                <li class="has-dropdown">
+                    <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Tools</button>
                     <ul class="dropdown-menu">
-                        <li><a href="https://app.logisticoreapp.com/rates/tool/" target="_blank" rel="noopener">UK Air Rates — search</a></li>
-                        <li><a href="https://app.logisticoreapp.com/rates/tool/curator/" target="_blank" rel="noopener">Upload tariffs (staff)</a></li>
+                        <li><a href="https://app.logisticoreapp.com/rates/tool/">UK Air Rates</a></li>
                         <li><a href="https://customs.logisticoreapp.com" target="_blank" rel="noopener">Customs Tool</a></li>
+                        <li class="dropdown-sep" aria-hidden="true"></li>
+                        <li><a href="https://app.logisticoreapp.com/rates/tool/curator/">Upload tariffs (staff)</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Products</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="uk-air-rates.html">UK Air Rates</a></li>
                         <li><a href="invoice-tool.html">Invoice Tool</a></li>
                         <li><a href="custom-tools.html">Custom Tools</a></li>
                     </ul>
@@ -95,9 +103,9 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-utilities">
-                <a href="https://app.logisticoreapp.com/rates/tool/" class="nav-chip" target="_blank" rel="noopener" title="UK Air Rate Search">✈ Rates</a>
-                <a href="https://customs.logisticoreapp.com" class="nav-chip nav-chip-alt" target="_blank" rel="noopener" title="Customs Tool">⚙ Customs</a>
-                <a href="https://app.logisticoreapp.com/app/login" class="login-btn" title="LogistiCore SaaS login">Login</a>
+                <a href="https://app.logisticoreapp.com/rates/tool/" class="nav-chip">✈ Rates</a>
+                <a href="https://customs.logisticoreapp.com" class="nav-chip nav-chip-alt" target="_blank" rel="noopener">⚙ Customs</a>
+                <a href="https://app.logisticoreapp.com/app/login" class="login-btn">Login</a>
             </div>
             </div>
         </nav>
@@ -778,5 +786,6 @@
     <!-- Custom Support Widget -->
     <link rel="stylesheet" href="support-widget.css">
     <script src="support-widget.js"></script>
+    <script src="site-nav.js"></script>
 </body>
 </html>

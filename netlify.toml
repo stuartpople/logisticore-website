@@ -2,3 +2,13 @@
 [build]
   publish = "."
   command = "echo static"
+
+[[redirects]]
+  from = "/rates"
+  to = "https://app.logisticoreapp.com/rates/tool/"
+  status = 302
+
+[[redirects]]
+  from = "/rates/*"
+  to = "https://app.logisticoreapp.com/rates/tool/"
+  status = 302
