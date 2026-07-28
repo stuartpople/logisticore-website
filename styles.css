@@ -118,6 +118,7 @@ nav {
     padding: 0.25rem 0.5rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .logo-container:hover {
@@ -131,6 +132,22 @@ nav {
     gap: 0.75rem;
     flex: 1;
     min-width: 0;
+}
+
+/* Centre primary links in the full header width; utilities stay right */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.65rem 1rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -205,20 +222,6 @@ nav {
 }
 
 /* Brand name styles removed - logo is now standalone */
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 0.65rem 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-}
 
 .nav-links > li > a:not(.login-btn):not(.nav-chip) {
     font-size: 0.875rem;
@@ -2146,9 +2149,14 @@ footer {
     .nav-links {
         display: flex;
         position: static;
+        left: auto;
+        transform: none;
         flex-direction: column;
         align-items: stretch;
         padding: 0;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
         gap: 0.75rem;
         box-shadow: none;
         border: none;
