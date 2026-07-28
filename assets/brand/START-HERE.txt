@@ -1,0 +1,33 @@
+LOGISTICORE BUSINESS CARDS — START HERE
+=====================================
+
+Why things looked confusing before:
+- The pretty "V2" pictures were MOCKUPS (how the card looks on marble)
+- The old print-*.png files were a DIFFERENT design
+- They did not match each other
+
+NOW you have one matching set. Only use files starting with UPLOAD-
+
+WHAT TO UPLOAD
+--------------
+1) UPLOAD-1-FRONT.png
+2) UPLOAD-2-BACK.png   ← working QR (opens Platform / SaaS page)
+3) UPLOAD-3-FRONT-SPOT-UV-MASK.png   ← only if you choose Spot UV
+4) UPLOAD-4-BACK-SPOT-UV-MASK-OPTIONAL.png  ← optional
+
+Ignore everything else in this folder.
+
+ORDER STEPS (Instantprint)
+--------------------------
+1. Go to https://www.instantprint.co.uk/ → Business Cards
+2. Soft Touch / Velvet · 85 × 55 mm · Double sided · 250 cards
+3. Turn on Spot UV if you want the shiny premium finish
+4. Upload UPLOAD-1-FRONT as FRONT
+5. Upload UPLOAD-2-BACK as BACK
+6. If Spot UV: upload UPLOAD-3 as the front Spot UV / embellishment mask
+7. Approve the on-screen proof → pay
+
+TEST THE QR FIRST
+-----------------
+Open UPLOAD-2-BACK.png on your phone and scan it.
+It should open: https://logisticoreapp.com/logisticore-saas.html
