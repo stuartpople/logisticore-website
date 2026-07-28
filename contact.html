@@ -17,7 +17,7 @@
     <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg?v=3" color="#0ea5e9">
     
     <link rel="preload" as="image" href="assets/img/logisticore-technologies-logo.png">
-        <link rel="stylesheet" href="styles.css?v=18">
+        <link rel="stylesheet" href="styles.css?v=19">
     
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -98,6 +98,7 @@
                 </li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="partners.html">Partners</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-utilities">
@@ -206,7 +207,10 @@
                             <option value="">Please select...</option>
                             <option value="it-support">IT Support & Managed Services</option>
                             <option value="saas">LogistiCore SaaS Platform</option>
-                            <option value="web-design">Website Design & Development</option>                            <option value="invoice-tool">Invoice Data Extraction Tool</option>                            <option value="general">General Inquiry</option>
+                            <option value="web-design">Website Design & Development</option>
+                            <option value="invoice-tool">Invoice Data Extraction Tool</option>
+                            <option value="partners">Partner Programme</option>
+                            <option value="general">General Inquiry</option>
                         </select>
                     </div>
                 </div>
@@ -439,6 +443,27 @@
                     </div>
                 </div>
 
+                <!-- Partner Programme Fields -->
+                <div id="partners-fields" class="conditional-fields form-section">
+                    <h4 class="form-section-title"><span class="icon">🤝</span> Partner Details</h4>
+                    <p style="color: #64748b; margin-bottom: 1rem; font-size: 0.95rem;">Prefer the full application? <a href="partners.html#partner-apply" style="color: #0ea5e9; font-weight: 600;">Use the partner programme form →</a></p>
+                    <div class="form-group">
+                        <label>Partnership type<span class="required">*</span></label>
+                        <select name="partner_type">
+                            <option value="">Please select...</option>
+                            <option value="reseller">Reseller partner</option>
+                            <option value="referral">Referral partner</option>
+                            <option value="implementation">Implementation / consulting</option>
+                            <option value="technology">Technology / integration</option>
+                            <option value="other">Other / not sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Company website</label>
+                        <input type="url" name="website" placeholder="https://">
+                    </div>
+                </div>
+
                 <!-- General Inquiry Fields -->
                 <div id="general-fields" class="conditional-fields form-section">
                     <h4 class="form-section-title"><span class="icon">💬</span> Your Inquiry</h4>
@@ -524,12 +549,12 @@
             </div>
 
             <div style="background: #ffffff; border-left: 4px solid #0ea5e9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: #0ea5e9; margin-bottom: 0.5rem;">🔧 Custom Tools &amp; Automation</h3>
+                <h3 style="color: #0ea5e9; margin-bottom: 0.5rem;">🤝 Partner Programme</h3>
                 <ul style="margin-left: 1.5rem; color: #64748b;">
-                    <li>Describe your problem</li>
-                    <li>Request a feasibility chat</li>
-                    <li>Bespoke tool development</li>
-                    <li>Process automation</li>
+                    <li>Reseller &amp; referral enquiries</li>
+                    <li>Implementation partnerships</li>
+                    <li>Technology integrations</li>
+                    <li><a href="partners.html" style="color: #0ea5e9;">Full partner application →</a></li>
                 </ul>
             </div>
         </div>
@@ -572,6 +597,7 @@
                     <option value="website-creation">Website Creation</option>
                     <option value="invoice-tool">Invoice Data Extraction Tool</option>
                     <option value="custom-tool">Custom Tool / Business Automation</option>
+                    <option value="partners">Partner Programme</option>
                     <option value="multiple">Multiple Services</option>
                     <option value="other">Other / General Inquiry</option>
                 </select>
@@ -736,6 +762,19 @@
                     field.removeAttribute('required');
                 });
             });
+
+            // Deep-link: contact.html?enquiry=saas|partners|invoice-tool|…
+            const params = new URLSearchParams(window.location.search);
+            const enquiry = params.get('enquiry');
+            if (enquiry) {
+                const aliases = { 'custom-tool': 'general', partner: 'partners' };
+                const value = aliases[enquiry] || enquiry;
+                const option = Array.from(enquiryTypeSelect.options).find(o => o.value === value);
+                if (option) {
+                    enquiryTypeSelect.value = value;
+                    enquiryTypeSelect.dispatchEvent(new Event('change'));
+                }
+            }
         });
     </script>
 

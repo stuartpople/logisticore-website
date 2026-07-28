@@ -1,0 +1,27 @@
+# LogistiCore Technologies
+
+> IT support, logistics SaaS, and web design for UK businesses. LogistiCore SaaS is a freight forwarding platform with air, sea, road, courier, warehouse, and HMRC CDS customs.
+
+- Site: https://logisticoreapp.com
+- App login: https://app.logisticoreapp.com/app/login
+- Sales: sales@logisticoreapp.com
+- Support: support@logisticoreapp.com
+- Phone: +44 (0) 20 4511 4156
+
+## Products & services
+
+- [LogistiCore SaaS](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for UK forwarders, brokers, and 3PLs
+- [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships
+- [IT Support](https://logisticoreapp.com/it-support.html): Managed IT services for logistics SMEs
+- [Website creation](https://logisticoreapp.com/website-creation.html): Logistics-focused web design
+- [UK Air Rates](https://logisticoreapp.com/uk-air-rates.html): Free UK air rate search tool
+- [Invoice tool](https://logisticoreapp.com/invoice-tool.html): PDF invoice extraction for customs
+- [Pricing](https://logisticoreapp.com/pricing.html)
+- [Contact](https://logisticoreapp.com/contact.html)
+
+## Guides
+
+- [Best freight forwarding software UK 2026](https://logisticoreapp.com/blog/best-freight-forwarding-software-uk-2026.html)
+- [Freight forwarding software buyer’s guide](https://logisticoreapp.com/blog/freight-forwarding-software-buyers-guide-2026.html)
+- [CDS customs checklist](https://logisticoreapp.com/blog/cds-customs-declarations-software-checklist-2026.html)
+- [Managed IT for logistics SMEs](https://logisticoreapp.com/blog/managed-it-services-logistics-smes-2026.html)

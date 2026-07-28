@@ -10,15 +10,32 @@
     "@type": "PostalAddress",
     "addressCountry": "GB"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+44-20-4511-4156",
-    "contactType": "customer service",
-    "areaServed": "GB",
-    "availableLanguage": "en"
-  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+44-20-4511-4156",
+      "email": "sales@logisticoreapp.com",
+      "contactType": "sales",
+      "areaServed": "GB",
+      "availableLanguage": "en"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+44-20-4511-4156",
+      "email": "support@logisticoreapp.com",
+      "contactType": "customer support",
+      "areaServed": "GB",
+      "availableLanguage": "en"
+    }
+  ],
   "sameAs": [
     "https://github.com/stuartpople"
+  ],
+  "knowsAbout": [
+    "Freight forwarding software",
+    "HMRC CDS customs declarations",
+    "Managed IT services",
+    "Logistics SaaS"
   ],
   "offers": [
     {
@@ -45,6 +62,15 @@
         "@type": "Service",
         "name": "Website Design & Development",
         "description": "Professional, mobile-responsive website design and development for UK businesses"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "LogistiCore Partner Programme",
+        "url": "https://logisticoreapp.com/partners.html",
+        "description": "Reseller, referral, implementation, and technology partnerships for LogistiCore SaaS"
       }
     }
   ]

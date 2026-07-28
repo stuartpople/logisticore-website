@@ -1137,6 +1137,25 @@ footer {
     margin: 0 auto;
 }
 
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.footer-nav a:hover {
+    color: var(--light-cyan);
+}
+
 .footer-legal {
     font-size: 0.9rem;
     margin-bottom: var(--spacing-xs);

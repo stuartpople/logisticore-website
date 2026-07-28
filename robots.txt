@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Prefer HTTPS canonical host
+Host: logisticoreapp.com
+
 Sitemap: https://logisticoreapp.com/sitemap.xml
