@@ -1,48 +1,44 @@
 # LogistiCore business cards — order & upload guide
 
-## Final design direction (v2)
-- **Navy** `#0A1628` soft-touch base (website + SaaS)
-- **Teal** `#0A9396` + **cyan** `#00BCD4` accents (SaaS / site)
-- **Gold** `#D4A84B` thin rules only (classy, not flashy)
-- **QR on back** → `https://logisticoreapp.com/logisticore-saas.html` (Platform / SaaS page)
-- Name: Stuart Pople · Founder & Director
+## Working QR (important)
+Yes — the **print files** include a real scannable QR.
 
-## Files to upload
-| File | Use |
+| File | QR? |
 |------|-----|
-| `print-front-300dpi.png` | Front artwork (upload as Front) |
-| `print-back-300dpi.png` | Back artwork with QR (upload as Back) |
-| `qr-logisticore-saas.png` | Standalone QR if the printer’s editor needs it separately |
-| `logisticore-card-v2-*.png` | Visual mockups only — do **not** upload these as print files |
+| `print-back-300dpi.png` | **Yes — working.** Opens `https://logisticoreapp.com/logisticore-saas.html` |
+| `qr-logisticore-saas.png` | Same QR standalone |
+| `logisticore-card-v2-back.png` | Mockup only — AI QRs often **do not** scan. Do not upload this. |
 
-## Best quality / cost balance (recommended)
-**Order from Instantprint** (UK) — soft-touch / velvet laminate, 400gsm-class stock:
+Test before ordering: open `print-back-300dpi.png` on your phone and scan the QR with the Camera app.
 
-1. Go to [instantprint.co.uk](https://www.instantprint.co.uk/) → Business Cards  
-2. Choose **Soft Touch / Velvet** (or “Laminated Soft Touch”), **double-sided**, size **85 × 55 mm**  
-3. Quantity **250** (or 500 if you network a lot — unit cost drops)  
-4. Upload `print-front-300dpi.png` and `print-back-300dpi.png`  
-5. In the preview: check QR is sharp, text not cut off, ~3 mm safe from edges  
-6. Skip foil for this run (foil looks great but adds cost). Soft-touch navy already reads premium.
+## Spot UV — yes, that look
+Your navy soft-touch front with the cube + LOGISTICORE is **ideal** for Spot UV:
 
-**Optional upgrade later:** MOO Super Soft Touch + silver foil on the cube only — when budget allows.
+- Soft-touch matte navy = quiet luxury
+- Spot UV on **cube/logo + LOGISTICORE + gold rule** = glossy catchlight / raised feel (exactly the Instantprint “Spot UV” example)
+- Leave the tagline matte so the UV elements pop
 
-Avoid: basic 300gsm uncoated VistaPrint stock for client-facing cards.
+**Skip Gold Foil for now** if keeping cost down — Spot UV alone gets you most of the “million pound” tactile quality.
 
-## How to “push designs” to the printer
-You do **not** email them our chat mockups. You:
+### Instantprint upload (with Spot UV)
+1. Business Cards → Soft Touch / Velvet → 85×55 mm → double-sided → **250**
+2. Enable **Spot UV** (single-sided on the front is enough; optional light UV on back name)
+3. Upload artwork:
+   - Front colour: `print-front-300dpi.png`
+   - Front Spot UV mask: `print-front-spot-uv-mask.png` (black = UV)
+   - Back colour: `print-back-300dpi.png`
+   - Back Spot UV mask (optional): `print-back-spot-uv-mask.png`
+4. Check on-screen proof: UV only on logo/wordmark; QR stays crisp on white pad
+5. Pay
 
-1. Open the printer’s website  
-2. Pick product + finish  
-3. **Upload the two print PNGs** (front + back)  
-4. Approve the on-screen proof  
-5. Pay and wait for delivery (usually a few working days)
+If the site asks for one combined file instead of a mask, use their Spot UV editor and paint UV over the cube + LOGISTICORE only.
 
-If Instantprint asks for PDF: open the PNGs in Preview → Export as PDF, or ask me and I’ll generate PDF bleed files.
+## Colour palette
+- Navy `#0A1628`
+- Cyan `#00BCD4` / Teal `#0A9396`
+- Gold `#D4A84B` (thin rule only)
+- White text
 
-## Specs checklist
-- Size: 85 × 55 mm  
-- Stock: soft-touch / velvet laminate both sides  
-- Colour: full colour CMYK  
-- QR must stay high-contrast (dark on white square) — already done on the back file  
-- Quantity: start with **250**
+## Name on back
+Stuart Pople · Founder & Director  
++44 (0) 20 4511 4156 · sales@logisticoreapp.com · www.logisticoreapp.com
