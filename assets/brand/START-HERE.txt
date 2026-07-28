@@ -27,6 +27,18 @@ ORDER STEPS (Instantprint)
 6. If Spot UV: upload UPLOAD-3 as the front Spot UV / embellishment mask
 7. Approve the on-screen proof → pay
 
+
+SPOT UV (optional shiny finish)
+-------------------------------
+Read: instantprint/HOW-TO-SPOT-UV.txt
+
+Short version:
+- Tick Spot UV on the Soft Touch cards
+- Upload Front + Back colour files
+- EITHER upload LogistiCore_Front_SpotUV.pdf as the Spot UV file
+- OR email artwork@instantprint.co.uk with your order number and ask them
+  to Spot UV the cube + LOGISTICORE + gold line (they do this free)
+
 TEST THE QR FIRST
 -----------------
 Open UPLOAD-2-BACK.png on your phone and scan it.

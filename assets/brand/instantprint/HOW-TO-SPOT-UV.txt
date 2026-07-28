@@ -1,0 +1,54 @@
+SPOT UV ON INSTANTPRINT — SIMPLE VERSION
+========================================
+
+Instantprint has NO AI for Spot UV. You give them 2 kinds of file:
+  A) The colourful card art
+  B) A separate black-and-white "SpotUV" file showing WHERE the shiny bit goes
+     (black = shiny Spot UV, white = leave matte)
+
+EASIEST OPTION (recommended if the site confuses you)
+-----------------------------------------------------
+1. Order Soft Touch / Velvet business cards + tick Spot UV
+2. Upload only:
+     UPLOAD-1-FRONT.png
+     UPLOAD-2-BACK.png
+   OR the PDFs in the instantprint/ folder:
+     LogistiCore_Front.pdf
+     LogistiCore_Back.pdf
+3. Email artwork@instantprint.co.uk and say:
+
+   "Please apply Spot UV to the front cube logo, the LOGISTICORE wordmark,
+    and the thin gold line. Leave the tagline and back QR matte.
+    Order number: [paste your order number]"
+
+   Instantprint will set the Spot UV up for free.
+
+DIY OPTION (upload the Spot UV files yourself)
+----------------------------------------------
+In the instantprint/ folder:
+
+  LogistiCore_Front.pdf          → Front artwork
+  LogistiCore_Back.pdf           → Back artwork (working QR)
+  LogistiCore_Front_SpotUV.pdf   → Front Spot UV layer
+  LogistiCore_Back_SpotUV.pdf    → Back Spot UV (name only — optional)
+
+OR one combined file some setups accept:
+  LogistiCore_COMPLETE_4pages.pdf
+  Page 1 = Front art
+  Page 2 = Back art
+  Page 3 = Front Spot UV
+  Page 4 = Back Spot UV
+
+When the site asks for "Spot UV artwork" / "embellishment" / "_SpotUV":
+  upload LogistiCore_Front_SpotUV.pdf
+
+What you should see on the proof
+--------------------------------
+Instantprint usually shows 3 views:
+  1. Your colour artwork
+  2. Just the Spot UV shapes (black/white)
+  3. Both overlaid — check the shine sits on the cube + LOGISTICORE
+
+If overlay looks wrong, use the EASIEST OPTION email above.
+
+Do NOT put Spot UV on the QR code.
