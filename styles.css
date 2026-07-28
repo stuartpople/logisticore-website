@@ -875,6 +875,174 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     color: var(--dark-navy);
 }
 
+/* Featured platform spotlight on homepage */
+.platform-spotlight {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    background: linear-gradient(145deg, #0A1628 0%, #0f172a 55%, #0c2744 100%);
+    border: 1px solid rgba(0, 188, 212, 0.35);
+    border-radius: 16px;
+    padding: 2.5rem 2.25rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.35);
+}
+
+.platform-spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 420px 280px at 15% 20%, rgba(0, 188, 212, 0.18), transparent 70%),
+        radial-gradient(ellipse 360px 240px at 90% 80%, rgba(14, 165, 233, 0.12), transparent 70%);
+    pointer-events: none;
+}
+
+.platform-spotlight-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.platform-spotlight .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light-cyan);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.platform-spotlight h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.platform-spotlight p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 36rem;
+}
+
+.platform-spotlight ul {
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 1.75rem;
+}
+
+.platform-spotlight li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    padding-left: 1.35rem;
+    position: relative;
+}
+
+.platform-spotlight li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--primary-cyan);
+}
+
+.platform-spotlight-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.platform-spotlight-aside {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.platform-spotlight-aside h3 {
+    color: var(--light-cyan);
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.platform-spotlight-aside .metric {
+    margin-bottom: 1rem;
+}
+
+.platform-spotlight-aside .metric strong {
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.platform-spotlight-aside .metric span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+}
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.capability-card {
+    background: #fff;
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 1.35rem 1.25rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.capability-card:hover {
+    border-color: rgba(14, 165, 233, 0.45);
+    transform: translateY(-2px);
+}
+
+.capability-card h3 {
+    font-size: 1.05rem;
+    color: var(--dark-navy);
+    margin-bottom: 0.5rem;
+}
+
+.capability-card p {
+    color: var(--mid-gray);
+    font-size: 0.92rem;
+    margin-bottom: 0.85rem;
+}
+
+.capability-card a {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.capability-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .platform-spotlight-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
 .service-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

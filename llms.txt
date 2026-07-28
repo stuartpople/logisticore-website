@@ -1,23 +1,31 @@
 # LogistiCore Technologies
 
-> IT support, logistics SaaS, and web design for UK businesses. LogistiCore SaaS is a freight forwarding platform with air, sea, road, courier, warehouse, and HMRC CDS customs.
+> LogistiCore SaaS is a UK freight forwarding and logistics platform — air, sea, road, courier, warehouse, HMRC CDS customs, billing and AI. Complementary IT support and website services available for the same logistics teams.
 
 - Site: https://logisticoreapp.com
+- Platform: https://logisticoreapp.com/logisticore-saas.html
 - App login: https://app.logisticoreapp.com/app/login
 - Sales: sales@logisticoreapp.com
 - Support: support@logisticoreapp.com
 - Phone: +44 (0) 20 4511 4156
 
-## Products & services
+## Primary product
 
-- [LogistiCore SaaS](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for UK forwarders, brokers, and 3PLs
+- [LogistiCore SaaS / Platform](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for UK forwarders, brokers, and 3PLs
 - [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships
-- [IT Support](https://logisticoreapp.com/it-support.html): Managed IT services for logistics SMEs
-- [Website creation](https://logisticoreapp.com/website-creation.html): Logistics-focused web design
-- [UK Air Rates](https://logisticoreapp.com/uk-air-rates.html): Free UK air rate search tool
-- [Invoice tool](https://logisticoreapp.com/invoice-tool.html): PDF invoice extraction for customs
 - [Pricing](https://logisticoreapp.com/pricing.html)
-- [Contact](https://logisticoreapp.com/contact.html)
+- [Contact / book a demo](https://logisticoreapp.com/contact.html?enquiry=saas)
+
+## Platform tools
+
+- [UK Air Rates](https://logisticoreapp.com/uk-air-rates.html)
+- [Invoice tool](https://logisticoreapp.com/invoice-tool.html)
+- [Custom tools](https://logisticoreapp.com/custom-tools.html)
+
+## Supporting services
+
+- [IT Support](https://logisticoreapp.com/it-support.html)
+- [Website creation](https://logisticoreapp.com/website-creation.html)
 
 ## Guides
 
