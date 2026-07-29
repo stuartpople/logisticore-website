@@ -5,10 +5,14 @@
   "alternateName": "LogistiCore",
   "url": "https://logisticoreapp.com",
   "logo": "https://logisticoreapp.com/assets/img/logisticore-technologies-logo.png",
-  "description": "Professional IT support, logistics software (SaaS), and modern web design for UK businesses",
+  "description": "International freight forwarding software (LogistiCore SaaS), with complementary IT support and web design. UK-headquartered; serving logistics teams worldwide.",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "GB"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
   },
   "contactPoint": [
     {
@@ -16,16 +20,16 @@
       "telephone": "+44-20-4511-4156",
       "email": "sales@logisticoreapp.com",
       "contactType": "sales",
-      "areaServed": "GB",
-      "availableLanguage": "en"
+      "areaServed": "Worldwide",
+      "availableLanguage": ["en", "en-GB", "en-US"]
     },
     {
       "@type": "ContactPoint",
       "telephone": "+44-20-4511-4156",
       "email": "support@logisticoreapp.com",
       "contactType": "customer support",
-      "areaServed": "GB",
-      "availableLanguage": "en"
+      "areaServed": "Worldwide",
+      "availableLanguage": ["en", "en-GB", "en-US"]
     }
   ],
   "sameAs": [
@@ -33,19 +37,11 @@
   ],
   "knowsAbout": [
     "Freight forwarding software",
+    "International logistics SaaS",
     "HMRC CDS customs declarations",
-    "Managed IT services",
-    "Logistics SaaS"
+    "Managed IT services"
   ],
   "offers": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "IT Support & Managed Services",
-        "description": "24/7 IT support, managed services, network security, cloud migration for UK businesses"
-      }
-    },
     {
       "@type": "Offer",
       "itemOffered": {
@@ -53,15 +49,7 @@
         "name": "LogistiCore SaaS Platform",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Cloud-based logistics management software for freight forwarders, customs brokers, and 3PLs"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Website Design & Development",
-        "description": "Professional, mobile-responsive website design and development for UK businesses"
+        "description": "Cloud-based logistics management software for freight forwarders, customs brokers, and 3PLs worldwide"
       }
     },
     {
@@ -70,7 +58,23 @@
         "@type": "Service",
         "name": "LogistiCore Partner Programme",
         "url": "https://logisticoreapp.com/partners.html",
-        "description": "Reseller, referral, implementation, and technology partnerships for LogistiCore SaaS"
+        "description": "Reseller, referral, implementation, and technology partnerships for LogistiCore SaaS worldwide"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "IT Support & Managed Services",
+        "description": "24/7 IT support, managed services, network security, cloud migration for logistics businesses"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Website Design & Development",
+        "description": "Professional, mobile-responsive website design and development for logistics and international businesses"
       }
     }
   ]

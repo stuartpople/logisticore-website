@@ -1,6 +1,6 @@
 # LogistiCore Technologies
 
-> LogistiCore SaaS is a UK freight forwarding and logistics platform — air, sea, road, courier, warehouse, HMRC CDS customs, billing and AI. Complementary IT support and website services available for the same logistics teams.
+> LogistiCore SaaS is an international freight forwarding and logistics platform — air, sea, road, courier, warehouse, customs (including UK HMRC CDS), billing and AI. UK-headquartered; built for logistics teams worldwide. Complementary IT support and website services available.
 
 - Site: https://logisticoreapp.com
 - Platform: https://logisticoreapp.com/logisticore-saas.html
@@ -8,17 +8,18 @@
 - Sales: sales@logisticoreapp.com
 - Support: support@logisticoreapp.com
 - Phone: +44 (0) 20 4511 4156
+- Markets: Worldwide (English); UK HQ
 
 ## Primary product
 
-- [LogistiCore SaaS / Platform](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for UK forwarders, brokers, and 3PLs
-- [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships
+- [LogistiCore SaaS / Platform](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for forwarders, brokers, and 3PLs internationally
+- [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships worldwide
 - [Pricing](https://logisticoreapp.com/pricing.html)
 - [Contact / book a demo](https://logisticoreapp.com/contact.html?enquiry=saas)
 
 ## Platform tools
 
-- [UK Air Rates](https://logisticoreapp.com/uk-air-rates.html)
+- [UK Air Rates](https://logisticoreapp.com/uk-air-rates.html) (free tool for UK export tariffs)
 - [Invoice tool](https://logisticoreapp.com/invoice-tool.html)
 - [Custom tools](https://logisticoreapp.com/custom-tools.html)
 
