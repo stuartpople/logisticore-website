@@ -231,9 +231,33 @@ nav {
 .nav-utilities {
     display: flex;
     align-items: center;
+    gap: 0.45rem;
     flex-shrink: 0;
 }
 
+.nav-chip {
+    color: #67e8f9 !important;
+    padding: calc(0.4rem - 1px) calc(0.75rem - 1px);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 188, 212, 0.55);
+    background: rgba(0, 188, 212, 0.08);
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-chip:hover {
+    background: rgba(0, 188, 212, 0.2);
+    color: #fff !important;
+}
+
+.nav-chip-alt {
+    border-color: rgba(103, 232, 249, 0.45);
+}
+
+.nav-chip::after,
 .nav-utilities .login-btn::after {
     display: none !important;
 }
@@ -2144,6 +2168,7 @@ footer {
         border-top: 1px solid rgba(0, 188, 212, 0.2);
     }
 
+    .nav-utilities .nav-chip,
     .nav-utilities .login-btn {
         text-align: center;
         width: 100%;
