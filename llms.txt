@@ -17,6 +17,9 @@
 - [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships worldwide
 - [Pricing](https://logisticoreapp.com/pricing.html)
 - [Contact / book a demo](https://logisticoreapp.com/contact.html?enquiry=saas)
+- [Results & use cases](https://logisticoreapp.com/results.html): Operational scenarios for forwarders, brokers and 3PLs
+- [Press kit](https://logisticoreapp.com/press-kit.html): Boilerplate, facts and brand assets for partners and directories
+
 
 ## Platform tools
 
@@ -31,6 +34,9 @@
 
 ## Guides
 
+- [Cloud freight management software](https://logisticoreapp.com/blog/cloud-freight-management-software-international.html)
+- [Freight software vs spreadsheets](https://logisticoreapp.com/blog/freight-software-vs-spreadsheets.html)
+- [Multimodal freight forwarding software](https://logisticoreapp.com/blog/multimodal-freight-forwarding-software.html)
 - [Best freight forwarding software UK 2026](https://logisticoreapp.com/blog/best-freight-forwarding-software-uk-2026.html)
 - [HMRC CDS software for freight forwarders](https://logisticoreapp.com/blog/hmrc-cds-software-freight-forwarders-uk.html)
 - [Migrate from a legacy freight TMS](https://logisticoreapp.com/blog/migrate-freight-forwarding-software-legacy-tms.html)
