@@ -13,6 +13,7 @@
 ## Primary product
 
 - [LogistiCore SaaS / Platform](https://logisticoreapp.com/logisticore-saas.html): Freight forwarding software for forwarders, brokers, and 3PLs internationally
+- [Freight software guide](https://logisticoreapp.com/freight-software.html): Freight management software capabilities, selection guidance, and FAQs
 - [Partner programme](https://logisticoreapp.com/partners.html): Reseller, referral, implementation, and technology partnerships worldwide
 - [Pricing](https://logisticoreapp.com/pricing.html)
 - [Contact / book a demo](https://logisticoreapp.com/contact.html?enquiry=saas)
