@@ -1206,6 +1206,7 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     left: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
     background: repeating-linear-gradient(
         90deg,
         transparent,
@@ -1233,6 +1234,11 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.saas-teaser > * {
+    position: relative;
+    z-index: 1;
 }
 
 .saas-teaser .btn {
