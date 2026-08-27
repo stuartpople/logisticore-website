@@ -27,7 +27,7 @@
 - [ ] Email addresses correct (stuart@, support@)
 - [ ] Company name: "LogistiCore Technologies Ltd"
 - [ ] Copyright year: 2025
-- [ ] Pricing information accurate (£500+, £750, £175-£200)
+- [ ] Pricing information accurate (SaaS from £349 / £549 / £799; setup from £500; extra users £125–£175)
 
 ### Visual/Design Check
 - [ ] Logo displays on all pages
