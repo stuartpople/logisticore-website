@@ -46,10 +46,11 @@
       "@type": "Offer",
       "itemOffered": {
         "@type": "SoftwareApplication",
-        "name": "LogistiCore SaaS Platform",
+        "name": "LogistiCore SaaS",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Cloud-based logistics management software for freight forwarders, customs brokers, and 3PLs worldwide"
+        "url": "https://logisticoreapp.com/logisticore-saas.html",
+        "description": "Freight software for forwarders, customs brokers and 3PLs. Air, sea, road and courier jobs, warehouse, documents and billing, with UK HMRC CDS inside the job."
       }
     },
     {

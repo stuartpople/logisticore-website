@@ -775,6 +775,12 @@
                     enquiryTypeSelect.dispatchEvent(new Event('change'));
                 }
             }
+            if (params.get('intent') === 'preorder') {
+                const note = 'I want to reserve onboarding for LogistiCore SaaS. Please send the next available start date and a quote for our desk size.';
+                document.querySelectorAll('textarea[name="message"]').forEach((field) => {
+                    if (!field.value) field.value = note;
+                });
+            }
         });
     </script>
 

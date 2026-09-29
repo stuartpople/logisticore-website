@@ -1,6 +1,38 @@
 User-agent: *
 Allow: /
 
+# Named AI answer engines. The wildcard above already allows them;
+# these lines make the permission explicit.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 # Prefer HTTPS canonical host
 Host: logisticoreapp.com
 
