@@ -46,7 +46,7 @@
 
 ## Direct answers
 
-Canonical facts: LogistiCore SaaS is freight software for forwarders, customs brokers and 3PLs. Air, sea, road and courier jobs, warehouse, documents and billing in one cloud system. UK HMRC CDS is inside the job. Direct CDS filing is United Kingdom only. UK-headquartered. Guide prices in GBP for 3 users: Starter from £349/month, Professional from £549/month, Enterprise from £799/month. Extra users £125–£175. Setup from £500. Phone +44 20 4511 4156.
+Canonical facts: LogistiCore SaaS is freight software for forwarders, customs brokers and 3PLs. Air, sea, road and courier jobs, warehouse, documents and billing in one cloud system. Customs sits inside the job, including live UK HMRC CDS, and is being extended worldwide. UK-headquartered. Guide prices in GBP for 3 users: Starter from £349/month, Professional from £549/month, Enterprise from £799/month. Extra users £125–£175. Setup from £500. Phone +44 20 4511 4156.
 
 - [Freight forwarding software with HMRC CDS](https://logisticoreapp.com/freight-forwarding-software-hmrc-cds.html)
 - [Warehouse and freight in one system](https://logisticoreapp.com/warehouse-and-freight-software.html)
