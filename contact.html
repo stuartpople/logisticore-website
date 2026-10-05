@@ -158,8 +158,9 @@
 
         <div class="contact-form-container">
             <!-- Single Professional Form with Conditional Fields -->
-            <form id="main-contact-form" class="contact-form" action="https://formspree.io/f/xkgzbaqy" method="POST">
-                
+            <form id="main-contact-form" class="contact-form" method="POST">
+                <input type="hidden" name="domain" value="logisticoreapp.com">
+
                 <div class="form-header">
                     <h3>Contact LogistiCore Technologies</h3>
                     <p>Tell us how we can help you - the form adapts based on your selection</p>
@@ -496,6 +497,7 @@
                 <div id="submit-section" class="form-submit" style="display: none;">
                     <button type="submit" class="btn btn-primary">Send Enquiry</button>
                 </div>
+                <p id="contact-form-status" role="status" aria-live="polite" style="text-align:center;margin-top:1rem;font-size:0.95rem;"></p>
             </form>
         </div>
 
@@ -559,63 +561,6 @@
             </div>
         </div>
 
-        <h2>Send Us a Message</h2>
-        <p>Fill out the form below and we'll get back to you within 24 hours (usually much sooner!).</p>
-
-        <form style="background: #f8fafc; padding: 2rem; border-radius: 12px; border: 2px solid #e2e8f0; margin: 2rem 0;" action="https://formspree.io/f/xkgzbaqy" method="POST">
-            <div style="margin-bottom: 1.5rem;">
-                <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">Your Name *</label>
-                <input type="text" id="name" name="name" required 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit;">
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">Email Address *</label>
-                <input type="email" id="email" name="email" required 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit;">
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">Phone Number</label>
-                <input type="tel" id="phone" name="phone" 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit;">
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="company" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">Company Name</label>
-                <input type="text" id="company" name="company" 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit;">
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="interest" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">I'm Interested In *</label>
-                <select id="interest" name="interest" required 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                    <option value="">Please select...</option>
-                    <option value="logisticore-saas">LogistiCore SaaS</option>
-                    <option value="it-support">IT Support & Managed Services</option>
-                    <option value="website-creation">Website Creation</option>
-                    <option value="invoice-tool">Invoice Data Extraction Tool</option>
-                    <option value="custom-tool">Custom Tool / Business Automation</option>
-                    <option value="partners">Partner Programme</option>
-                    <option value="multiple">Multiple Services</option>
-                    <option value="other">Other / General Inquiry</option>
-                </select>
-            </div>
-
-            <div style="margin-bottom: 1.5rem;">
-                <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #0A1628;">Message *</label>
-                <textarea id="message" name="message" rows="6" required 
-                    style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; text-align: center;">
-                * Required fields. We respect your privacy and will never share your information.
-            </p>
-        </form>
-
         <div style="background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 1.5rem; margin: 3rem 0; border-radius: 8px;">
             <h3 style="margin-top: 0; color: #0ea5e9;">🔐 Your Privacy Matters</h3>
             <p style="margin-bottom: 0;">We are committed to protecting your personal data in compliance with UK GDPR regulations. Any information you share with us is used solely to respond to your inquiry and provide relevant information about our services. We never sell or share your data with third parties.</p>
@@ -666,6 +611,7 @@
         }
         </script>
 
+    <script src="website-enquiry.js"></script>
     <!-- Mobile Menu Toggle Script -->
     <script>
         function toggleMenu() {
@@ -751,10 +697,15 @@
             }
         }
 
-        // Form will submit naturally to Formspree - no JavaScript interception needed
-
         // Initialize form on page load - disable all conditional fields
         document.addEventListener('DOMContentLoaded', function() {
+            if (window.LCWebsiteEnquiry) {
+                window.LCWebsiteEnquiry.bindForm(
+                    document.getElementById('main-contact-form'),
+                    { statusEl: document.getElementById('contact-form-status') }
+                );
+            }
+
             // Disable all conditional fields on initial load so they don't submit as empty
             document.querySelectorAll('.conditional-fields').forEach(section => {
                 section.querySelectorAll('input, select, textarea').forEach(field => {

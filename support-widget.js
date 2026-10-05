@@ -2,8 +2,8 @@
 (function() {
     'use strict';
     
-    // Formspree endpoint - same service you use for contact form
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkgzbaqy';
+    // First-party LogistiCore enquiry API (no third-party form hosts)
+    const ENQUIRY_ENDPOINT = 'https://app.logisticoreapp.com/api/services/website-enquiry/';
     
     // Create widget HTML
     const widgetHTML = `
@@ -153,58 +153,54 @@
         // Handle form submission
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            console.log('Form submitted. Sending via Formspree...');
             
             // Clear previous error
             errorDiv.classList.remove('active');
             errorDiv.textContent = '';
             
-            // Get form data
             const formData = new FormData(form);
-            
-            // Build formatted message for Formspree
-            const message = `
-Type: ${formData.get('type')}
-Priority: ${formData.get('priority')}
-Product: ${formData.get('product') || 'Not specified'}
-Reference: ${formData.get('reference') || 'None'}
+            const message = [
+                `Type: ${formData.get('type')}`,
+                `Priority: ${formData.get('priority')}`,
+                `Product: ${formData.get('product') || 'Not specified'}`,
+                `Reference: ${formData.get('reference') || 'None'}`,
+                '',
+                `Subject: ${formData.get('subject')}`,
+                '',
+                'Description:',
+                formData.get('description') || '',
+            ].join('\n');
 
-Subject: ${formData.get('subject')}
-
-Description:
-${formData.get('description')}
-`;
+            const payload = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                topic: `[${formData.get('priority')}] ${formData.get('type')}: ${formData.get('subject')}`,
+                message: message,
+                domain: 'logisticoreapp.com',
+                page_url: window.location.href,
+                fax_number_leave_blank: '',
+            };
             
-            // Create new FormData with formatted fields for Formspree
-            const submitData = new FormData();
-            submitData.append('name', formData.get('name'));
-            submitData.append('email', formData.get('email'));
-            submitData.append('_replyto', formData.get('email'));
-            submitData.append('_subject', `[${formData.get('priority')}] ${formData.get('type')}: ${formData.get('subject')}`);
-            submitData.append('message', message);
-            
-            // Disable submit button
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             
             try {
-                // Send to Formspree
-                const response = await fetch(FORMSPREE_ENDPOINT, {
+                const response = await fetch(ENQUIRY_ENDPOINT, {
                     method: 'POST',
-                    body: submitData,
                     headers: {
-                        'Accept': 'application/json'
-                    }
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
                 });
+                const body = await response.json().catch(() => ({}));
                 
-                if (response.ok) {
-                    console.log('✓ Email sent successfully via Formspree');
-                    // Show success message
+                if (response.ok && body.ok !== false) {
                     formContainer.style.display = 'none';
                     successContainer.style.display = 'block';
                     form.reset();
                 } else {
-                    throw new Error('Failed to send message');
+                    throw new Error(body.error || 'Failed to send message');
                 }
                 
             } catch (error) {

@@ -223,8 +223,8 @@
             <p style="text-align: center; max-width: 640px; margin: 0 auto 2rem; color: #64748b;">Tell us about your organisation. We typically reply within two business days to arrange an introductory call.</p>
 
             <div class="contact-form-container">
-                <form id="partner-application-form" class="contact-form" action="https://formspree.io/f/xkgzbaqy" method="POST">
-                    <input type="hidden" name="_subject" value="Partner programme application — LogistiCore">
+                <form id="partner-application-form" class="contact-form" method="POST">
+                    <input type="hidden" name="domain" value="logisticoreapp.com">
                     <input type="hidden" name="form_type" value="partner_application">
                     <input type="hidden" name="enquiry_type" value="partners">
 
@@ -314,6 +314,7 @@
                     <div class="form-section" style="display: flex; justify-content: center; padding-top: 0.5rem;">
                         <button type="submit" class="btn btn-primary">Submit partner application</button>
                     </div>
+                    <p id="partner-form-status" role="status" aria-live="polite" style="text-align:center;margin-top:1rem;font-size:0.95rem;"></p>
                 </form>
             </div>
         </section>
@@ -365,6 +366,7 @@
         </div>
     </footer>
 
+    <script src="website-enquiry.js"></script>
     <script>
         function toggleMenu() {
             const navWrap = document.getElementById('navWrap') || document.getElementById('navLinks');
@@ -377,6 +379,15 @@
                 }
             });
         });
+        if (window.LCWebsiteEnquiry) {
+            window.LCWebsiteEnquiry.bindForm(
+                document.getElementById('partner-application-form'),
+                {
+                    statusEl: document.getElementById('partner-form-status'),
+                    successMessage: 'Thank you — your partner application has been sent. We typically reply within two business days.',
+                }
+            );
+        }
     </script>
     <link rel="stylesheet" href="support-widget.css">
     <script src="support-widget.js"></script>
