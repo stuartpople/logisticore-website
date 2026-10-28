@@ -780,18 +780,42 @@ body:has(.page-header h1:contains("IT Support")) .nav-links a[href="it-support.h
     box-shadow: 0 5px 20px rgba(0, 188, 212, 0.4);
 }
 
+/* Default: readable on light backgrounds (entity-facts, pricing, spotlight) */
 .btn-tertiary {
+    background: #ffffff;
+    color: #0A1628;
+    border: 2px solid #0A9396;
+    font-weight: 700;
+}
+
+.btn-tertiary:hover {
+    background: #0A9396;
+    color: #ffffff;
+    border-color: #0A9396;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(10, 147, 150, 0.35);
+}
+
+/* Dark heroes / CTAs keep the translucent white tertiary */
+.hero .btn-tertiary,
+.saas-hero .btn-tertiary,
+.tour-cta .btn-tertiary,
+.platform-spotlight .btn-tertiary,
+.content-section.bg-dark .btn-tertiary {
     background: rgba(255, 255, 255, 0.15);
     color: var(--white);
     border: 2px solid var(--light-cyan);
     font-weight: 600;
 }
 
-.btn-tertiary:hover {
+.hero .btn-tertiary:hover,
+.saas-hero .btn-tertiary:hover,
+.tour-cta .btn-tertiary:hover,
+.platform-spotlight .btn-tertiary:hover,
+.content-section.bg-dark .btn-tertiary:hover {
     background: var(--light-cyan);
     color: var(--dark-navy);
     border-color: var(--light-cyan);
-    transform: translateY(-3px);
     box-shadow: 0 5px 20px rgba(103, 232, 249, 0.4);
 }
 
