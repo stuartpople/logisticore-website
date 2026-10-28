@@ -402,6 +402,71 @@
             display: block;
         }
 
+        /* Inside the platform gallery */
+        .inside-platform {
+            padding: 4rem 1.5rem;
+            background: linear-gradient(180deg, #071319 0%, #0A1628 100%);
+            border-top: 1px solid rgba(10,147,150,0.18);
+            border-bottom: 1px solid rgba(10,147,150,0.18);
+        }
+        .inside-platform .module-header { max-width: 1100px; margin: 0 auto 2rem; text-align: center; }
+        .inside-platform .module-header h2 { color: #f0f6fc; }
+        .inside-platform .module-header .module-desc { color: #8b9ba8; margin: 0 auto; }
+        .inside-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .inside-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .inside-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(10,147,150,0.55);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+        }
+        .inside-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            object-position: top center;
+            background: #0f1f35;
+        }
+        .inside-card .copy { padding: 1rem 1.1rem 1.2rem; }
+        .inside-card .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #0A9396;
+            margin-bottom: 0.35rem;
+        }
+        .inside-card h3 {
+            margin: 0 0 0.35rem;
+            font-size: 1.05rem;
+            color: #f0f6fc;
+        }
+        .inside-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #8b9ba8;
+            line-height: 1.45;
+        }
+        @media (max-width: 980px) {
+            .inside-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         /* FAQ */
         .faq-grid {
             display: grid;
@@ -427,6 +492,7 @@
         @media (max-width: 768px) {
             .saas-hero h1 { font-size: 2.2rem; }
             .module-header h2 { font-size: 1.8rem; }
+            .inside-grid { grid-template-columns: 1fr; }
             .stat-item .stat-number { font-size: 2rem; }
             .saas-cta h2 { font-size: 2rem; }
             .tile-grid { grid-template-columns: 1fr; }
@@ -525,6 +591,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="logisticore-saas.html">Platform</a></li>
+                <li><a href="product-tour.html">Product tour</a></li>
                 <li class="has-dropdown">
                     <button type="button" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Services</button>
                     <ul class="dropdown-menu">
@@ -563,7 +630,8 @@
         <p class="hero-sub">LogistiCore SaaS is the all-in-one freight forwarding platform for international logistics companies. Jobs, documents, accounting, rates, tracking, CRM, warehouse, compliance, and AI &mdash; plus integrated UK customs through HMRC CDS. UK-headquartered, built for teams worldwide.</p>
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; position:relative;">
             <a href="contact.html?enquiry=saas&amp;intent=preorder" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1.05rem;">Request onboarding</a>
-            <a href="#features" class="btn btn-secondary" style="padding:0.8rem 2rem; font-size:1.05rem;">See All Features &darr;</a>
+            <a href="product-tour.html" class="btn btn-secondary" style="padding:0.8rem 2rem; font-size:1.05rem;">Take the product tour</a>
+            <a href="#features" class="btn btn-tertiary" style="padding:0.8rem 2rem; font-size:1.05rem;">See All Features &darr;</a>
         </div>
     </section>
 
@@ -614,6 +682,67 @@
                 <source src="assets/anim/logisticore-feature-showcase.mp4" type="video/mp4">
             </video>
         </div>
+    </section>
+
+    <section class="inside-platform" id="inside-platform" aria-labelledby="inside-platform-title">
+        <div class="module-header">
+            <div class="module-label">Product screens</div>
+            <h2 id="inside-platform-title">Inside the <span class="teal">platform</span></h2>
+            <p class="module-desc">Tenant screens from the live product — open any card for the full tour.</p>
+        </div>
+        <div class="inside-grid">
+            <a class="inside-card" href="product-tour.html#jobs">
+                <img src="assets/img/product/jobs-board.png" alt="Jobs and shipments board" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Operations</div>
+                    <h3>Jobs board</h3>
+                    <p>Every shipment mode on one ops desk.</p>
+                </div>
+            </a>
+            <a class="inside-card" href="product-tour.html#zero-touch">
+                <img src="assets/img/product/zero-touch.png" alt="Zero-Touch customs document upload" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Automation</div>
+                    <h3>Zero-Touch</h3>
+                    <p>Invoice PDF to declaration without re-keying.</p>
+                </div>
+            </a>
+            <a class="inside-card" href="product-tour.html#customs">
+                <img src="assets/img/product/customs-entries.png" alt="Customs entries with HMRC CDS" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Customs</div>
+                    <h3>HMRC CDS</h3>
+                    <p>Declarations inside the freight job.</p>
+                </div>
+            </a>
+            <a class="inside-card" href="product-tour.html#sanctions">
+                <img src="assets/img/product/sanctions-screen.png" alt="Global party sanctions screen" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Compliance</div>
+                    <h3>Sanctions screen</h3>
+                    <p>OFAC, UK, EU and UN checks that block until cleared.</p>
+                </div>
+            </a>
+            <a class="inside-card" href="product-tour.html#dashboard">
+                <img src="assets/img/product/client-dashboard.png" alt="Client operations dashboard" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Visibility</div>
+                    <h3>Ops dashboard</h3>
+                    <p>KPIs without hopping between tools.</p>
+                </div>
+            </a>
+            <a class="inside-card" href="product-tour.html#ai">
+                <img src="assets/img/product/ai-hub.png" alt="AI intelligence hub" width="720" height="450" loading="lazy">
+                <div class="copy">
+                    <div class="tag">Intelligence</div>
+                    <h3>AI hub</h3>
+                    <p>Assistants where the work already happens.</p>
+                </div>
+            </a>
+        </div>
+        <p style="text-align:center; margin: 2rem 0 0;">
+            <a href="product-tour.html" class="btn btn-secondary">Open the full product tour</a>
+        </p>
     </section>
 
     <main id="features">
@@ -1109,6 +1238,7 @@
         <div class="footer-content">
             <nav class="footer-nav" aria-label="Footer">
                 <a href="freight-software.html">Freight Software</a>
+                <a href="product-tour.html">Product tour</a>
                 <a href="partners.html">Partners</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="blog/index.html">Blog</a>
