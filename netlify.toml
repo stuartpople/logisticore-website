@@ -4,6 +4,16 @@
   command = "echo static"
 
 [[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
   from = "/rates"
   to = "https://app.logisticoreapp.com/rates/tool/"
   status = 302
