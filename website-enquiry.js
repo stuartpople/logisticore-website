@@ -95,9 +95,12 @@
         if (typeof options.onSuccess === 'function') options.onSuccess();
       } catch (err) {
         if (statusEl) {
-          statusEl.textContent =
-            (err && err.message) ||
-            'Could not send your enquiry. Please email sales@logisticoreapp.com or try again.';
+          var msg = (err && err.message) || '';
+          if (!msg || /failed to fetch|networkerror|load failed/i.test(msg)) {
+            msg =
+              'Could not reach the server from this browser. Please email sales@logisticoreapp.com or call +44 20 4511 4156.';
+          }
+          statusEl.textContent = msg;
           statusEl.style.color = '#dc2626';
         }
         if (typeof options.onError === 'function') options.onError(err);
