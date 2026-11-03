@@ -1848,6 +1848,108 @@ footer {
     margin-bottom: 3rem;
 }
 
+.optional-label {
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.enquiry-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.enquiry-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    width: 100%;
+    text-align: left;
+    padding: 1.15rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: var(--dark-navy);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    font: inherit;
+}
+
+.enquiry-choice:hover {
+    border-color: #94a3b8;
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+.enquiry-choice:focus-visible {
+    outline: none;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.15);
+}
+
+.enquiry-choice.is-selected {
+    border-color: var(--primary-cyan);
+    background: #f0f9ff;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
+}
+
+.enquiry-choice-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.enquiry-choice-label {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.enquiry-choice-hint {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.enquiry-choice-more {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+}
+
+.enquiry-choice-compact {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.enquiry-choice-compact.is-selected {
+    color: var(--dark-navy);
+}
+
+.enquiry-type-select {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#contact-details-flow[hidden] {
+    display: none !important;
+}
+
 .form-section-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -2057,6 +2159,10 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .enquiry-choice-grid {
+        grid-template-columns: 1fr;
+    }
+
     .feature-grid {
         grid-template-columns: 1fr;
     }
